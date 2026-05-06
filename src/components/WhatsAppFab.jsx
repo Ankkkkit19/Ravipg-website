@@ -6,7 +6,7 @@ const WhatsAppFab = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
   return (
-    <div className="fixed bottom-10 right-10 z-40 flex flex-col items-end">
+    <div className="fixed md:bottom-10 bottom-28 right-6 md:right-10 z-40 flex flex-col items-end">
       <AnimatePresence>
         {showTooltip && (
           <motion.div

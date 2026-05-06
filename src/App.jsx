@@ -73,7 +73,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="fixed bottom-32 right-10 z-40 w-12 h-12 bg-white dark:bg-slate-800 text-slate-800 dark:text-white rounded-full flex items-center justify-center shadow-lg border border-slate-100 dark:border-slate-700 hover:bg-primary hover:text-white transition-all"
+              className="fixed md:bottom-32 bottom-48 right-6 md:right-10 z-40 w-12 h-12 bg-white dark:bg-slate-800 text-slate-800 dark:text-white rounded-full flex items-center justify-center shadow-lg border border-slate-100 dark:border-slate-700 hover:bg-primary hover:text-white transition-all"
             >
               <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
                 ↑
