@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 import TrustStats from './components/TrustStats';
 import Rooms from './components/Rooms';
 import Amenities from './components/Amenities';
-import LocationConnectivity from './components/LocationConnectivity';
+import InteractiveMap from './components/InteractiveMap';
 import Gallery from './components/Gallery';
 import WhyUs from './components/WhyUs';
 import Testimonials from './components/Testimonials';
@@ -54,7 +54,7 @@ function App() {
           <TrustStats />
           <Rooms onBook={openBooking} onDetails={openDetails} />
           <Amenities />
-          <LocationConnectivity />
+          <InteractiveMap />
           <Gallery />
           <WhyUs />
           <Testimonials />
