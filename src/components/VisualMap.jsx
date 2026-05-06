@@ -34,7 +34,7 @@ const VisualMap = () => {
         </div>
 
         {/* The Visual Map Canvas */}
-        <div className="relative w-full max-w-5xl mx-auto aspect-[16/10] md:aspect-[21/9] bg-slate-50 dark:bg-slate-900/50 rounded-[60px] border border-slate-100 dark:border-slate-800 p-8 shadow-inner overflow-hidden">
+        <div className="relative w-full max-w-5xl mx-auto aspect-[3/4] md:aspect-[21/9] bg-slate-50 dark:bg-slate-900/50 rounded-[40px] md:rounded-[60px] border border-slate-100 dark:border-slate-800 p-4 md:p-8 shadow-inner overflow-hidden">
           
           {/* Animated Grid Background */}
           <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" 
@@ -47,15 +47,14 @@ const VisualMap = () => {
               whileInView={{ scale: 1 }}
               className="relative"
             >
-              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(37,99,235,0.4)] relative z-10">
-                <Home size={40} className="text-white" />
+              <div className="w-16 h-16 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(37,99,235,0.4)] relative z-10">
+                <Home className="text-white w-8 h-8 md:w-10 md:h-10" />
               </div>
               {/* Pulse Effects */}
               <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-20 scale-150"></div>
-              <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-10 scale-[2]"></div>
               
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 whitespace-nowrap">
-                <span className="bg-slate-900 text-white px-4 py-2 rounded-xl text-sm font-bold shadow-xl">Ravi's Elite PG</span>
+                <span className="bg-slate-900 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl text-[10px] md:text-sm font-bold shadow-xl uppercase tracking-wider">Ravi's Elite PG</span>
               </div>
             </motion.div>
           </div>
@@ -70,8 +69,8 @@ const VisualMap = () => {
                 x2={loc.x}
                 y2={loc.y}
                 stroke="currentColor"
-                strokeWidth="2"
-                strokeDasharray="8 8"
+                strokeWidth="1.5"
+                strokeDasharray="6 6"
                 className="text-primary/20 dark:text-primary/10"
                 initial={{ pathLength: 0, opacity: 0 }}
                 whileInView={{ pathLength: 1, opacity: 1 }}
@@ -93,16 +92,16 @@ const VisualMap = () => {
                 transition={{ delay: loc.delay + 0.5 }}
                 className="flex flex-col items-center"
               >
-                {/* Distance Label on Line (Hover) */}
-                <div className="mb-2 bg-white dark:bg-slate-800 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-700 shadow-sm transition-all group-hover:scale-110 group-hover:border-primary">
-                  <span className="text-[10px] font-black text-primary uppercase">{loc.dist}</span>
+                {/* Distance Label on Line */}
+                <div className="mb-1 md:mb-2 bg-white dark:bg-slate-800 px-2 md:px-3 py-0.5 md:py-1 rounded-full border border-slate-100 dark:border-slate-700 shadow-sm transition-all group-hover:scale-110 group-hover:border-primary">
+                  <span className="text-[8px] md:text-[10px] font-black text-primary uppercase">{loc.dist}</span>
                 </div>
 
-                <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center shadow-lg border border-slate-100 dark:border-slate-700 group-hover:bg-primary group-hover:text-white transition-all cursor-pointer">
-                  <loc.icon size={24} />
+                <div className="w-8 h-8 md:w-12 md:h-12 bg-white dark:bg-slate-800 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg border border-slate-100 dark:border-slate-700 group-hover:bg-primary group-hover:text-white transition-all cursor-pointer">
+                  <loc.icon className="w-4 h-4 md:w-6 md:h-6" />
                 </div>
                 
-                <span className="mt-2 text-[11px] font-bold text-slate-500 dark:text-slate-400 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="mt-1 md:mt-2 text-[8px] md:text-[11px] font-bold text-slate-500 dark:text-slate-400 whitespace-nowrap md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                   {loc.name}
                 </span>
               </motion.div>
@@ -110,9 +109,9 @@ const VisualMap = () => {
           ))}
 
           {/* Corner Decorations */}
-          <div className="absolute bottom-8 left-8 flex items-center space-x-3 text-slate-400">
-            <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs font-bold tracking-widest uppercase">Live Connection Map</span>
+          <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 flex items-center space-x-2 md:space-x-3 text-slate-400">
+            <div className="w-2 h-2 md:w-3 md:h-3 bg-primary rounded-full animate-pulse" />
+            <span className="text-[8px] md:text-xs font-bold tracking-widest uppercase">Live Connection Map</span>
           </div>
         </div>
 
